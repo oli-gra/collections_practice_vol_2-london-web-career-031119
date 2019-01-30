@@ -64,13 +64,12 @@ require 'pry'
 def organize_schools (hash)#sort by location
   school_sorted = {}
   hash.each do |school,loc|
-    binding.pry
     if school_sorted.key?(school)
       school_sorted[loc][:location] << school
     else
       school_sorted = {[loc][:location] => [school]}
     end
-    school_sorted.push(school)
+    binding.pry
   end
   school_sorted
 end
