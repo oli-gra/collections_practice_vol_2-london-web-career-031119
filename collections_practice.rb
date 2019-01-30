@@ -57,10 +57,6 @@ end
       },
 =end
 
-require 'pry'
-
-
-
 def organize_schools (hash)#sort by location
   school_sorted = {}
   hash.each do |school,loc|
