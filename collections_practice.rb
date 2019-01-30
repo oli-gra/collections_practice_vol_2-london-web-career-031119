@@ -64,7 +64,7 @@ require 'pry'
 def organize_schools (hash)#sort by location
   school_sorted = {}
   hash.each do |school,loc|
-    if school_sorted.key?(loc)
+    if school_sorted.key?(loc[:location])
       school_sorted[loc][:location] << school
     else
       school_sorted = { loc[:location] => [school] }
