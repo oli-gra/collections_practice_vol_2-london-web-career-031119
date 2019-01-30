@@ -69,5 +69,6 @@ def organize_schools (hash)#sort by location
       school_sorted = { loc[:location] => [school] }
     end
   end
+  end
   school_sorted
 end
