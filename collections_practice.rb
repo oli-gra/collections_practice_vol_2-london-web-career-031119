@@ -63,10 +63,10 @@ def organize_schools (hash)#sort by location
   hash.each do |school,loc_data|
     loc_data.each do |loc_key,loc|
       binding.pry
-    if school_sorted.key?(loc[:location])
-      school_sorted[loc[:location]].push(school) 
+    if school_sorted.key?(loc)
+      school_sorted[loc] << school 
     else
-      school_sorted = { loc[:location] => [school] }
+      school_sorted[loc] => [school]
     end
   end
   end
