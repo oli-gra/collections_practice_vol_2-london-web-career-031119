@@ -63,12 +63,12 @@ def organize_schools (hash)#sort by location
   hash.each do |school,loc_data|
     loc_data.each do |loc_key,loc|
   
-    if school_sorted.key?(loc)
-      school_sorted[loc] << school 
-    else
-      school_sorted[loc] => [school]
+      if school_sorted.key?(loc)
+        school_sorted[loc] << school 
+      else
+        school_sorted[loc] => [school]
+      end
     end
-  end
   end
   school_sorted
 end
