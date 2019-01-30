@@ -72,5 +72,5 @@ def organize_schools (hash)#sort by location
     end
     school_sorted.push(school)
   end
-  school_sorted.sort
+  school_sorted
 end
