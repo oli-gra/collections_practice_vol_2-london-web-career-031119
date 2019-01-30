@@ -66,7 +66,7 @@ def organize_schools (hash)#sort by location
       if school_sorted.key?(loc)
         school_sorted[loc] << school 
       else
-        school_sorted[loc] => [school]
+        school_sorted[loc] = [school]
       end
     end
   end
