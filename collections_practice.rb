@@ -49,6 +49,21 @@ def find_cool (hash)#fimd cool hashes
   end
 end
 
+def reformat_languages(languages)
+  new_hash = {}
+  languages.each do |style, langs|
+    langs.each do |name, type|
+      binding.pry
+      if new_hash[name]
+        new_hash[name][:style] << style
+      else
+        new_hash[name] = {style: [style], type: type[:type] }
+      end
+    end 
+  end
+  new_hash
+end
+
 =begin
 (:schools) {
     {
@@ -61,11 +76,11 @@ def organize_schools (hash)#sort by location
   school_sorted = {}
   hash.each do |school,loc|
     if school_sorted.key?(loc[:location])
+      binding.pry
       school_sorted[loc][:location] << school
     else
       school_sorted = { loc[:location] => [school] }
     end
-    binding.pry
   end
   school_sorted
 end
