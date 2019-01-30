@@ -62,7 +62,7 @@ def organize_schools (hash)#sort by location
   school_sorted = {}
   hash.each do |school,loc_data|
     loc_data.each do |loc_key,loc|
-      binding.pry
+  
     if school_sorted.key?(loc)
       school_sorted[loc] << school 
     else
