@@ -38,7 +38,7 @@ def count_elements (array)#counts repetitions of element
 end
 
 def merge_data (obj1,obj2)#combine nested data
-  obj1.merge(obj2)
+  
 end
       
 def find_cool (hash)#fimd cool hashes
@@ -62,7 +62,6 @@ def organize_schools (hash)#sort by location
   school_sorted = {}
   hash.each do |school,loc_data|
     loc_data.each do |loc_key,loc|
-  
       if school_sorted.key?(loc)
         school_sorted[loc] << school 
       else
