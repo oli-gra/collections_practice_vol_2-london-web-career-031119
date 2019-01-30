@@ -68,7 +68,7 @@ def organize_schools (hash)#sort by location
       school_sorted[loc][:location] << school
     else
       binding.pry
-      school_sorted = {loc[:location] => [school]}
+      school_sorted = { loc[:location] => [school] }
     end
     binding.pry
   end
