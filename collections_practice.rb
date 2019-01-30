@@ -37,8 +37,12 @@ def count_elements (array)#counts repetitions of element
 	reps_array
 end
 
-def merge_data (obj1,obj2)#combine nested data
-  
+def merge_data(keys, data)
+  keys.each do |name_hash|
+    data.each do |hash|
+      name_hash.merge!(hash[name_hash[:first_name]])
+    end
+  end
 end
       
 def find_cool (hash)#fimd cool hashes
