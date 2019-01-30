@@ -67,6 +67,7 @@ def organize_schools (hash)#sort by location
     if school_sorted.key?(school)
       school_sorted[loc][:location] << school
     else
+      binding.pry
       school_sorted = {[loc][:location] => [school]}
     end
     binding.pry
